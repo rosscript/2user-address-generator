@@ -1,7 +1,7 @@
-# ISTI_06122022
+# LIBAN ACT 2.0 05/06/23
 
 
-INSTALLAZIONE ELECTRUM DA TERMINALE
+ELECTRUM INSTALLATION BY TERMINAL 
 sudo apt-get update
 sudo apt-get -y install electrum
 
