@@ -1,7 +1,6 @@
-## Comando Carabinieri Antifalsificazione Monetaria - Sezione Criptovalute
-## Creazione di un wallet bitcoin utilizzabile con client tipo Electrum
+## Creating a bitcoin wallet that can be used with Electrum-type clients.
 
-#importazione delle librerie necessarie
+## Importing the necessary libraries.
 import hashlib, base58, ecdsa, os
 
 #INIZIO FUNZIONI
@@ -40,15 +39,15 @@ def pub_key(key):
 #FINE FUNZIONI
 
 #visualizzazione del titolo 
-messaggio = input("Comando Carabinieri Antifalsificazione Monetaria - Sezione Criptovalute. Generazione sicura di un wallet bitcoin. Premere invio per iniziare")
+messaggio = input("Secure generation of a bitcoin wallet. Press enter to begin")
 os.system('clear')
 
 #acquisizione della prima stringa casuale dal primo utente
-stringa1 = input("UTENTE 1 digitare una stringa casuale e annotare, poi premere invio: ")
+stringa1 = input("USER 1 type a random string and annotate, then press enter: ")
 os.system('clear')
 
 #acquisizione della seconda stringa casuale dal secondo utente
-stringa2 = input("UTENTE 2 digitare una stringa casuale e annotare, poi premere invio: ")
+stringa2 = input("USER 2 type a random string and annotate, then press enter: ")
 os.system('clear')
 
 #concatenazione delle due stringhe in un unica stringa
@@ -59,22 +58,22 @@ secretKey = hashlib.sha256(stringa.encode()).digest()
 secretKeyW = wif(secretKey)
 
 #visualizzazione al PRIMO utente della prima metá dell'hash ottenuto
-messaggio = input("Passare il computer all'Utente 1 e premere invio")
+messaggio = input("Switch the computer to User 1 and press enter")
 os.system('clear')
-print("Private key parte 1:     " + secretKeyW.decode("utf-8")[:25])
+print("Private key part 1:     " + secretKeyW.decode("utf-8")[:25])
 print("")
-messaggio = input("Annotare la private key e premere invio, poi passare all'utente 2")
+messaggio = input("Write down the private key and press enter, then go to user 2")
 os.system('clear')
 
 #visualizzazione al SECONDO utente della seconda metá dell'hash ottenuto
-messaggio = input("Utente 2, quando pronto premere invio")
+messaggio = input("User 2, when ready press enter")
 os.system('clear')
-print("Private key parte 2:     " + secretKeyW.decode("utf-8")[25:])
+print("Private key part 2:     " + secretKeyW.decode("utf-8")[25:])
 print("")
-messaggio = input("Annotare la private key e premere invio")
+messaggio = input("Write down the private key and press enter")
 os.system('clear')
 
 #messaggio di fine procedura e visualizzazione dell'indirizzo bitcoin generato
-messaggio = input("Procedura terminata, premere invio per visualizzare l'address del wallet")
+messaggio = input("Procedure finished, press enter to display the wallet address")
 os.system('clear')
 print("Wallet:      " + addr(secretKey).decode("utf-8"))
