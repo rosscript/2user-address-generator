@@ -1,19 +1,18 @@
-## Comando Carabinieri Antifalsificazione Monetaria - Sezione Criptovalute
-## Creazione di un wallet ETH (e layer 2) utilizzabile con client tipo Metamask
+## Creating an ETH wallet (and layer 2) that can be used with Metamask-type clients.
 
 import hashlib
 from eth_account import Account
 import os
 
-x = input("Comando Carabinieri Antifalsificazione Monetaria - Sezione Criptovalute. Generazione sicura di un wallet ETH. Premere invio per iniziare")
+x = input("Secure generation of an ETH wallet. Press enter to begin")
 
 os.system('clear')
 
-insert1 = input("UTENTE 1 digitare una stringa casuale e annotare, poi premere invio: ")
+insert1 = input("USER 1 type a random string and annotate, then press enter:")
 
 os.system('clear')
 
-insert2 = input("UTENTE 2 digitare una stringa casuale e annotare, poi premere invio: ")
+insert2 = input("USER 2 type a random string and annotate, then press enter:")
 
 os.system('clear')
 
@@ -37,7 +36,7 @@ def address():
     print("Address:", wallet.address)
     
     
-ax = input("Passare il computer all'Utente 1 e premere invio")
+ax = input("Switch the computer to User 1 and press enter")
 
 os.system('clear')
 
@@ -45,11 +44,11 @@ priv_key1()
 
 print("")
 
-bx = input("Annotare la private key e premere invio, poi passare all'utente 2")
+bx = input("Write down the private key and press enter, then go to user 2")
 
 os.system('clear')
 
-c = input("Utente 2, quando pronto premere invio")
+c = input("User 2, when ready press enter")
 
 os.system('clear')
 
@@ -57,7 +56,7 @@ priv_key2()
 
 print("")
 
-dx = input("Procedura terminata, premere invio per visualizzare l'address del wallet")
+dx = input("Procedure finished, press enter to display the wallet address")
 
 os.system('clear')
 
