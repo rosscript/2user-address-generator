@@ -1,6 +1,6 @@
 # Simple Address Generator
 
-Questo progetto contiene due script Python per la generazione sicura di wallet crittografici:
+Questo progetto contiene due script Python per la generazione sicura di wallet dividendo la chiave privata tra due utenti.
 
 1. `walletcreatebtc.py` - Generatore di wallet Bitcoin
 2. `walletcreateth.py` - Generatore di wallet Ethereum
