@@ -2,6 +2,14 @@
 
 ## Importing the necessary libraries.
 import hashlib, base58, ecdsa, os
+import platform
+
+def clear_screen():
+    '''Pulisce lo schermo in modo compatibile con Windows e Unix'''
+    if platform.system() == 'Windows':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 #INIZIO FUNZIONI
 def hash256(key):
@@ -40,15 +48,15 @@ def pub_key(key):
 
 #visualizzazione del titolo 
 messaggio = input("Secure generation of a bitcoin wallet. Press enter to begin")
-os.system('clear')
+clear_screen()
 
 #acquisizione della prima stringa casuale dal primo utente
 stringa1 = input("USER 1 type a random string and annotate, then press enter: ")
-os.system('clear')
+clear_screen()
 
 #acquisizione della seconda stringa casuale dal secondo utente
 stringa2 = input("USER 2 type a random string and annotate, then press enter: ")
-os.system('clear')
+clear_screen()
 
 #concatenazione delle due stringhe in un unica stringa
 stringa = stringa1 + stringa2
@@ -59,21 +67,21 @@ secretKeyW = wif(secretKey)
 
 #visualizzazione al PRIMO utente della prima metá dell'hash ottenuto
 messaggio = input("Switch the computer to User 1 and press enter")
-os.system('clear')
+clear_screen()
 print("Private key part 1:     " + secretKeyW.decode("utf-8")[:25])
 print("")
 messaggio = input("Write down the private key and press enter, then go to user 2")
-os.system('clear')
+clear_screen()
 
 #visualizzazione al SECONDO utente della seconda metá dell'hash ottenuto
 messaggio = input("User 2, when ready press enter")
-os.system('clear')
+clear_screen()
 print("Private key part 2:     " + secretKeyW.decode("utf-8")[25:])
 print("")
 messaggio = input("Write down the private key and press enter")
-os.system('clear')
+clear_screen()
 
 #messaggio di fine procedura e visualizzazione dell'indirizzo bitcoin generato
 messaggio = input("Procedure finished, press enter to display the wallet address")
-os.system('clear')
+clear_screen()
 print("Wallet:      " + addr(secretKey).decode("utf-8"))

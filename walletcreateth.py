@@ -3,18 +3,26 @@
 import hashlib
 from eth_account import Account
 import os
+import platform
+
+def clear_screen():
+    '''Pulisce lo schermo in modo compatibile con Windows e Unix'''
+    if platform.system() == 'Windows':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 x = input("Secure generation of an ETH wallet. Press enter to begin")
 
-os.system('clear')
+clear_screen()
 
 insert1 = input("USER 1 type a random string and annotate, then press enter:")
 
-os.system('clear')
+clear_screen()
 
 insert2 = input("USER 2 type a random string and annotate, then press enter:")
 
-os.system('clear')
+clear_screen()
 
 insert = insert1 + insert2
 
@@ -38,7 +46,7 @@ def address():
     
 ax = input("Switch the computer to User 1 and press enter")
 
-os.system('clear')
+clear_screen()
 
 priv_key1()
 
@@ -46,11 +54,11 @@ print("")
 
 bx = input("Write down the private key and press enter, then go to user 2")
 
-os.system('clear')
+clear_screen()
 
 c = input("User 2, when ready press enter")
 
-os.system('clear')
+clear_screen()
 
 priv_key2()
 
@@ -58,7 +66,7 @@ print("")
 
 dx = input("Procedure finished, press enter to display the wallet address")
 
-os.system('clear')
+clear_screen()
 
 address()
 
